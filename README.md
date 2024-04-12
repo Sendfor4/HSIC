@@ -18,7 +18,7 @@ HybridSN的PyTorch的实现方式：<https://github.com/Pancakerr/HybridSN.git><
 
 (2)HybridSN.ipynb就是这篇论文<https://arxiv.org/abs/1902.06701>所指向的仓库（<https://github.com/gokriznastic/HybridSN.git>，使用tensorflow实现）中，再指向的另一个仓库使用pytorch（<https://github.com/Pancakerr/HybridSN.git>，使用PyTorch实现）实现的方式，但是我清空了所有的输出。<br>
 
-(3)按理来说两个notebook直接run都是可以的。如果用搭载了cuda的windows平台的话，我记得应该是在```train_loader = DataLoader(TrainDataset, batch_size=batch_size, shuffle=True, num_workers=nw)```设置num_workers就好，其他处理方法我记不清了，可以参照河北工业大学刘老师的这个视频<https://www.bilibili.com/video/BV1Y7411d7Ys?p=8&vd_source=cece6a5a4f4b1f17a244fe8b43859222>，大概20分钟左右的位置。
+(3)按理来说两个notebook直接run都是可以的。如果用搭载了cuda的windows平台的话，我记得应该是在```train_loader = DataLoader(TrainDataset, batch_size=batch_size, shuffle=True, num_workers=nw)```和```test_loader = DataLoader(TestDataset, batch_size=batch_size, shuffle=False, num_workers=nw)```设置num_workers=0就好，其他处理方法我记不清了，可以参照河北工业大学刘老师的这个视频<https://www.bilibili.com/video/BV1Y7411d7Ys?p=8&vd_source=cece6a5a4f4b1f17a244fe8b43859222>，大概20分钟左右的位置。
 
 ### 关于HybridSN的参考博客、论文、源码
 
